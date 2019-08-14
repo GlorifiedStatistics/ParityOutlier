@@ -3,7 +3,9 @@
 This project is a solution to the "Bad Coding Challenge #17" posted on [r/badcode](https://www.reddit.com/r/badcode/). The problem is as follows:
 
 > Write a method that accepts an array of integers where every item is either odd or even except for a single outlier and return the outlier - e.g. [1, 3, 3, 7, 9, 13, 33, 21, 6] are all odd except for 6. How to handle invalid input is left undefined.
+>
 > outlier([1, 3, 3, 7, 9, 13, 33, 21, 6]) //6
+>
 > outlier([2, 2, 4, 2, 11, 10, 6]) //11
 
 Once you know what the parity is that you are looking for, it is rather simple to just search through the list, and return the first value with that parity. The problem is finding the parity of the outlier. I thought about this problem for hours and couldn't find a solution. So instead, I decided to have the computer figure it out for me.
