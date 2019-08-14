@@ -47,7 +47,7 @@ A python script version of the jupyter notebook. This can be imported in order t
 
 > python FindOutlierValue.py comma_separated_list_of_values [num_times]
 
-comma_separated_list_of_values - a comma separated list of at least 3 non-negative integer values. This should be a single string, and should have all values of a single parity (odd/even) with exactly one value that is of the opposite parity (even/odd)
+comma_separated_list_of_values - a comma separated list of at least 3 non-negative integer values. This should be a single string, and should have all values of a single parity (odd/even) with exactly one value that is of the opposite parity (even/odd). I figure there is no need to do any error checking, just don't enter in any bad values and you should be fine!
 
 num_times (optional) - the number of times to run the RNN, higher values take longer, but are more likely to be accurate. For the sake of efficiency, the code stops once num_times/2 networks agree on the right answer, since there is no need to test the rest of them at that point.
 
