@@ -61,16 +61,20 @@ The data first has to be converted into a format the RNN can use to learn. Each 
 into a (number_of_lists x size) matrix. Each value is then converted into a binary number (the maximum number of bits necessary to store all numbers in binary is computed first, and that many bits are used for the conversion). Any -1's are simply converted into all -1's. This then becomes a row, and the matrix is extended to be a tensor of shape (number_of_lists, number_of_bits, size). For example:
 
 Assume we had the lists:
+``` python
     [2, 4, 1, 10]
     [1, 6, 7]
     [2, 5, 3]
     [4, 4, 3, 4]
+```
 
 The smaller lists would have -1's appended until they are the right size:
+``` python
     [2, 4, 1, 10]
     [1, 6, 7, -1]
     [2, 5, 3, -1]
     [4, 4, 3,  4]
+```
 
 The largest number in these arrays is '10' which needs 4 bits to store, so converting all numbers into 4-bit representations (or -1's) would look like:
 
